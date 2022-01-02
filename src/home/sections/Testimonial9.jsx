@@ -42,15 +42,12 @@ const Testimonial9 = () => {
   const testimonialList = [
     {
       companyLogoUrl: "./assets/images/mock-logo-1.png",
-      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Fugit modi voluptas vero iusto fuga quos totam
-          eius, atis magnam tempora doloribus ducimus dolorem
-          culpa animi beatae tenetur! Sapiente, quia tempora."`,
+      comment: `"Sau khi học các lớp của CLB em đã có lương 2000$"`,
       icon: TwitterIcon,
       user: {
         imageUrl: "./assets/images/face-1.png",
-        name: "John Doe",
-        designation: "Product Manager",
+        name: "Bùi Việt Hoàng",
+        designation: "Cài win dạo",
       },
     },
     {
@@ -121,9 +118,9 @@ const Testimonial9 = () => {
   ];
 
   return (
-    <div className="section" id="testimonial9">
-      <div className="container text-center">
-        <h1 className="font-normal text-44 mt-0 mx-auto mb-16">
+    <div className='section' id='testimonial9'>
+      <div className='container text-center'>
+        <h1 className='font-normal text-44 mt-0 mx-auto mb-16'>
           Trải nghiệm lớp học
         </h1>
         <Carousel
@@ -131,8 +128,8 @@ const Testimonial9 = () => {
           slidesPerView={1}
           spacing={0}
           navigation={false}
-          paginationClass="mt-16"
-          carouselId="carousel-9"
+          paginationClass='mt-16'
+          carouselId='carousel-9'
         >
           {testimonialList.map((testimonial, index) => (
             <div className={clsx("mx-auto pt-8", classes.card)} key={index}>
@@ -143,35 +140,31 @@ const Testimonial9 = () => {
                 })}
               >
                 <Avatar
-                  className="w-108 h-108 image-border p-3px"
+                  className='w-108 h-108 image-border p-3px'
                   src={testimonial.user.imageUrl}
-                  alt="user"
+                  alt='user'
                 />
                 <p
                   className={clsx({
                     "text-left my-0 ml-8": !isMobile,
                   })}
                 >
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  aliquyam erat, sed diam voluptua.
+                  {testimonial.comment}
                 </p>
               </div>
-              <div className="flex flex-wrap mt-4 justify-center mb-2">
+              <div className='flex flex-wrap mt-4 justify-center mb-2'>
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Icon
                     key={i}
-                    className="mx-1"
-                    fontSize="small"
-                    color="primary"
+                    className='mx-1'
+                    fontSize='small'
+                    color='primary'
                   >
                     star
                   </Icon>
                 ))}
               </div>
-              <h5 className="inline-block m-0 font-medium">
+              <h5 className='inline-block m-0 font-medium'>
                 {testimonial.user.name}, {testimonial.user.designation}
               </h5>
             </div>
