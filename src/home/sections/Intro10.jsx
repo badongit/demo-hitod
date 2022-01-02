@@ -2,8 +2,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import clsx from "clsx";
-// import dateDiff from "../../utils/dateDiff";
 import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   introWrapper: {
@@ -41,54 +41,50 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 
 const Intro10 = () => {
   const classes = useStyles();
+  const [diffTime, setDiffTime] = useState({});
 
-  function dateDiff(from, to, type) {
-    const dateFrom = dayjs(from);
-    const dateTo = dayjs(to);
-    return dateFrom.diff(dateTo, type);
-  }
-
-  let day = dateDiff(Date.now(), "10/18/2010", "day");
-  let year = Math.floor(day / 31 / 12);
-  let month =
-    (day - year * 12 * 31) / 31 > 0
-      ? Math.floor((day - year * 12 * 31) / 31)
-      : 0;
-
-  day = day - year * 12 * 31 - month * 31;
+  useEffect(() => {
+    (() => {
+      dayjs.extend(duration);
+      const dateNow = dayjs(Date.now());
+      const dateBir = dayjs(new Date("10/18/2010"));
+      const diffTime = dayjs.duration(dateNow.diff(dateBir))["$d"];
+      setDiffTime(diffTime);
+    })();
+  }, []);
 
   return (
-    <section className='section' id='intro10'>
+    <section className="section" id="intro10">
       <div className={classes.introWrapper}>
-        <div className='container'>
+        <div className="container">
           <div
             className={clsx(
               "relative mx-auto text-center flex-column justify-center items-center",
-              classes.intro,
+              classes.intro
             )}
           >
-            <h4 className='font-normal m-0 mb-4 text-black'>
+            <h4 className="font-normal m-0 mb-4 text-black">
               18th October, 2010
             </h4>
-            <h1 className='font-medium text-44 text-primary m-0'>
+            <h1 className="font-medium text-44 text-primary m-0">
               CLB Tin học Đại học Công Nghiệp Hà Nội
             </h1>
-            <p className='mb-6 max-w-400 mx-auto'>
+            <p className="mb-6 max-w-400 mx-auto">
               CLB HIT là một câu lạc bộ học thuật của Khoa CNTT trường đại học
               Công Nghiệp Hà Nội,trụ sở tại tầng 9 nhà A1 CS1.
             </p>
-            <div className='flex max-w-400 mx-auto flex-wrap mb-2'>
-              <div className='text-center mr-8 mb-8'>
-                <div className='m-0 text-28'>{year}</div>
-                <div className='m-0'>Năm</div>
+            <div className="flex max-w-400 mx-auto flex-wrap mb-2">
+              <div className="text-center mr-8 mb-8">
+                <div className="m-0 text-28">{diffTime.years}</div>
+                <div className="m-0">Năm</div>
               </div>
-              <div className='text-center mr-8 mb-8'>
-                <div className='m-0 text-28'>{month}</div>
-                <div className='m-0'>Tháng</div>
+              <div className="text-center mr-8 mb-8">
+                <div className="m-0 text-28">{diffTime.months}</div>
+                <div className="m-0">Tháng</div>
               </div>
-              <div className='text-center mr-8 mb-8'>
-                <div className='m-0 text-28'>{day}</div>
-                <div className='m-0'>Ngày</div>
+              <div className="text-center mr-8 mb-8">
+                <div className="m-0 text-28">{diffTime.days}</div>
+                <div className="m-0">Ngày</div>
               </div>
               {/* <div className="text-center mb-8">
                 <div className="m-0 text-28">51</div>
@@ -96,9 +92,9 @@ const Intro10 = () => {
               </div> */}
             </div>
             <Button
-              variant='contained'
-              color='primary'
-              className='rounded px-6'
+              variant="contained"
+              color="primary"
+              className="rounded px-6"
             >
               Khám phá ngay
             </Button>
