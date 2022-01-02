@@ -42,6 +42,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     textAlign: "center",
     marginRight: "1rem",
   },
+  minHeight: {
+    minHeight: "84px",
+  },
 }));
 
 const Blog1 = () => {
@@ -49,75 +52,80 @@ const Blog1 = () => {
   const news = [
     {
       title: "Đăng ký học phần cực nhanh",
+      desc: "Để có thể đăng kí học phần một các nhanh nhất, bạn có thể sử dụng tab ẩn danh để giúp trang web load nhanh hơn",
     },
     {
       title: "Tôi đã đạt được mức lương 11000 đô như thế nào ?",
+      desc: "Để đạt được mức lương 11000 đô tôi đã kiên trì cố gắng trong suốt 3 năm sau ra trường. ",
     },
     {
       title: "11 mẹo lập trình viên Javascript phải biết",
+      desc: "11 mẹo giúp các Lập trình viên Javascript làm việc nhanh hơn.",
     },
     {
       title: "Làm chủ Java trong 1 tiếng",
+      desc: "Java là một trong những ngôn ngữ lập trình mạnh và được sử dụng đông đảo trong phát triển phần mềm, các trang web, game,..",
     },
   ];
 
   return (
-    <section className="section section-bg-light-primary" id="blog1">
-      <div className="container">
-        <div className="max-w-400 mb-16 text-center mx-auto">
-          <h1 className="mt-0 font-normal text-44">Bài viết mới nhất</h1>
+    <section className='section section-bg-light-primary' id='blog1'>
+      <div className='container'>
+        <div className='max-w-400 mb-16 text-center mx-auto'>
+          <h1 className='mt-0 font-normal text-44'>Bài viết mới nhất</h1>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            Lorem ipsum dolor sit amet
+            Tham gia các lớp học em được học hỏi rất nhiều điều từ anh chị
+            leader, support. Không chỉ thế chúng em còn được học kiến thức
+            chuyên ngành, anh chị leader, support thì nhiệt tình hỗ trợ chúng em
+            mọi lúc. Em rất tự hào khi mình là một thành viên của CLB Tin học
+            HIT
           </p>
         </div>
         <Grid container spacing={2}>
           {news.map((item, ind) => (
             <Grid key={ind} item md={3} sm={2} xs={12}>
               <Card elevation={3} className={clsx(classes.card, "card")}>
-                <div className="relative">
+                <div className='relative'>
                   <img
-                    className="w-full block"
+                    className='w-full block'
                     src={`/assets/images/sq-${ind + 1}.png`}
-                    alt="sq-1"
+                    alt='sq-1'
                   />
                   <div className={classes.imageOverlay}>
                     <Button
-                      className="text-white"
-                      variant="text"
-                      color="primary"
+                      className='text-white'
+                      variant='text'
+                      color='primary'
                     >
                       Xem thêm
                     </Button>
                   </div>
                 </div>
-                <div className="px-4 pt-4">
-                  <div className="flex items-center">
+                <div className='px-4 pt-4'>
+                  <div className='flex items-center'>
                     <div className={classes.dateHolder}>
-                      <p className="m-0 text-white">12</p>
-                      <small className="m-0 text-primary">Feb</small>
+                      <p className='m-0 text-white'>12</p>
+                      <small className='m-0 text-primary'>Feb</small>
                     </div>
-                    <h5 className="m-0">{item.title}</h5>
+                    <h5 className='m-0'>{item.title}</h5>
                   </div>
-                  <p className="mt-6 mb-8">
-                    Lorem ipsum dolor sit elitdo eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                  <p className='mt-6 mb-8' style={{ minHeight: "84px" }}>
+                    {item.desc}
                   </p>
-                  <Divider className="bg-light-primary" />
-                  <div className="flex justify-between items-center my-1">
-                    <div className="flex justify-between items-center">
-                      <Icon fontSize="small" className="text-muted mr-1">
+                  <Divider className='bg-light-primary' />
+                  <div className='flex justify-between items-center my-1'>
+                    <div className='flex justify-between items-center'>
+                      <Icon fontSize='small' className='text-muted mr-1'>
                         remove_red_eye
                       </Icon>
-                      <span className="text-muted">(23)</span>
-                      <Icon fontSize="small" className="text-muted ml-4 mr-1">
+                      <span className='text-muted'>(23)</span>
+                      <Icon fontSize='small' className='text-muted ml-4 mr-1'>
                         message
                       </Icon>
-                      <span className="text-muted">(45)</span>
+                      <span className='text-muted'>(45)</span>
                     </div>
                     <IconButton>
-                      <Icon fontSize="small" color="primary">
+                      <Icon fontSize='small' color='primary'>
                         share
                       </Icon>
                     </IconButton>

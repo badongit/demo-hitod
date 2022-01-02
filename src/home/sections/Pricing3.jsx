@@ -67,32 +67,37 @@ const Pricing3 = () => {
     {
       title: "Thiết kế web",
       price: "Thứ 3",
+      desc: "Tham gia lớp Thiết kế Web bạn sẽ được các anh chị áp dụng linh hoạt giữa truyền đạt kiến thức, kỹ năng kinh nghiệm và thực hành để giúp các bạn có thể tạo một website hoàn chỉnh.",
     },
     {
       title: "Lập trình Java",
       price: "Thứ 2",
+      desc: "Java là một nền tảng phát triển các ứng dụng phần mềm có vị trí rất lớn trong những năm gần đây. Đến với lớp Lập trình Java bạn sẽ được sử dụng trong, game hay ứng dụng trên di động,..",
     },
     {
       title: "Thiết kế đồ họa",
       price: "Thứ 4",
+      desc: "Tham gia lớp Thiết kế đồ hoạ các bạn sẽ được học các kiến thức về màu sắc, bố cục,.. hơn hết các bạn còn có thể thoả sức đam mê sáng tạo để cơ những ấn phẩm đẹp.",
     },
     {
       title: "Lập trình Python",
       price: "Thứ 6",
+      desc: "Python là ngôn ngữ lập trình cấp cao, đa mục đính và được sử dụng rộng rãi. Đến với lớp Lập trình Python các bạn sẽ được học (...tự điền học gì nhá, mình ko bk nó học gì)",
     },
   ];
 
   return (
-    <section className="section" id="pricing3">
-      <div className="container">
-        <div className="max-w-600 mb-14 text-center mx-auto">
-          <h1 className="mt-0 font-normal text-44">
+    <section className='section' id='pricing3'>
+      <div className='container'>
+        <div className='max-w-600 mb-14 text-center mx-auto'>
+          <h1 className='mt-0 font-normal text-44'>
             Các lớp học của chúng tôi
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
+            Các lớp học của CLB Tin học HIT mở ra nhằm mục đích trau dồi và phát
+            triển các kỹ năng chuyên ngành mà các bạn đang theo học. Giúp các
+            bạn có thêm những kinh nghiệm thực tế với các bài tập lớn của mỗi
+            lớp học.
           </p>
         </div>
 
@@ -100,26 +105,23 @@ const Pricing3 = () => {
           <Grid container spacing={3}>
             {classList.map((plan, ind) => (
               <Grid key={ind} item lg={3} md={3} sm={6} xs={12}>
-                <Card className={classes.card} elevation={2}>
-                  <div className="title-holder my-4">
-                    <h4 className="font-normal capitalize m-0">{plan.title}</h4>
-                    <p className="m-0 text-inherit text-18">
-                      <span className="price mx-1 text-32 font-normal">
+                <Card className={classes.card} elevation={4}>
+                  <div className='title-holder my-4'>
+                    <h4 className='font-normal capitalize m-0'>{plan.title}</h4>
+                    <p className='m-0 text-inherit text-18'>
+                      <span className='price mx-1 text-32 font-normal'>
                         {plan.price}
                       </span>
                     </p>
                   </div>
 
-                  <div className="px-6 pb-8">
-                    <div className="mb-8">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor
-                    </div>
+                  <div className='px-6 pb-8'>
+                    <div className='mb-8'>{plan.desc}</div>
 
                     <Button
-                      className="ticket-button rounded px-6"
-                      variant="outlined"
-                      color="primary"
+                      className='ticket-button rounded px-6'
+                      variant='outlined'
+                      color='primary'
                     >
                       Tham gia
                     </Button>

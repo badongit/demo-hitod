@@ -78,38 +78,38 @@ const EventSchedule1 = () => {
   ];
 
   return (
-    <section className="section" id="schedule1">
-      <div className="container">
-        <div className="max-w-500 mx-auto text-center">
-          <h1 className="mt-0 font-normal text-44">Sự kiện thường niên</h1>
-          <p className="mb-16">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore
+    <section className='section' id='schedule1'>
+      <div className='container'>
+        <div className='max-w-500 mx-auto text-center'>
+          <h1 className='mt-0 font-normal text-44'>Sự kiện thường niên</h1>
+          <p className='mb-16'>
+            Sự kiện thường niên của CLB nhằm mục đích giao lưu gắn kết các khoá,
+            trau dồi kiến thức giúp các nắm chắc hơn kiến thức chuyên ngành.
           </p>
-          <div className="inline-block mb-10">
+          <div className='inline-block mb-10'>
             <div
               className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
             >
               <div
-                className="px-6 py-2 cursor-pointer"
+                className='px-6 py-2 cursor-pointer'
                 onClick={() => setTabIndex(0)}
               >
                 Mùa Xuân
               </div>
               <div
-                className="px-6 py-2 cursor-pointer"
+                className='px-6 py-2 cursor-pointer'
                 onClick={() => setTabIndex(1)}
               >
                 Mùa Hè
               </div>
               <div
-                className="px-6 py-2 cursor-pointer"
+                className='px-6 py-2 cursor-pointer'
                 onClick={() => setTabIndex(2)}
               >
                 Mùa Thu
               </div>
               <div
-                className="px-6 py-2 cursor-pointer"
+                className='px-6 py-2 cursor-pointer'
                 onClick={() => setTabIndex(2)}
               >
                 Mùa Đông
@@ -124,28 +124,28 @@ const EventSchedule1 = () => {
               <Grid key={ind} item sm={6} xs={12}>
                 <div className={classes.evenetCard}>
                   <div>
-                    <div className="p-2px inline-block rounded circle-holder">
-                      <div className="w-76 h-76 rounded bg-light-primary flex-column justify-center items-center text-primary">
-                        <h4 className="font-medium m-0">{item.time}</h4>
+                    <div className='p-2px inline-block rounded circle-holder'>
+                      <div className='w-76 h-76 rounded bg-light-primary flex-column justify-center items-center text-primary'>
+                        <h4 className='font-medium m-0'>{item.time}</h4>
                         {/* <small>Oct</small> */}
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="event-title m-0 text-primary font-normal">
+                    <h4 className='event-title m-0 text-primary font-normal'>
                       {item.title}
                     </h4>
-                    <div className="mt-4 mb-8 relative">
+                    <div className='mt-4 mb-8 relative'>
                       <Grid container spacing={0}>
                         <Grid item xs={5}>
-                          <span className="font-medium">Địa điểm:</span>
+                          <span className='font-medium'>Địa điểm:</span>
                         </Grid>
                         <Grid item xs={7}>
                           {item.address}
                         </Grid>
                         <Grid item xs={5}>
-                          <span className="font-medium">Thời gian:</span>
+                          <span className='font-medium'>Thời gian:</span>
                         </Grid>
                         <Grid item xs={7}>
                           {item.time}
@@ -153,9 +153,9 @@ const EventSchedule1 = () => {
                       </Grid>
                     </div>
                     <Button
-                      variant="outlined"
-                      color="primary"
-                      className="rounded px-8 buy-ticket-button"
+                      variant='outlined'
+                      color='primary'
+                      className='rounded px-8 buy-ticket-button'
                     >
                       Tham gia
                     </Button>

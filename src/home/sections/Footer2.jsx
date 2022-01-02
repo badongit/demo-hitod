@@ -52,43 +52,43 @@ const Footer2 = () => {
   const classes = useStyles();
 
   return (
-    <section className={`section ${classes.section}`} id="contact4">
-      <div className="container">
+    <section className={`section ${classes.section}`} id='contact4'>
+      <div className='container'>
         <Grid container spacing={3}>
           <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Về chúng tôi</h4>
-              <p className="my-6 max-w-200 text-inherit">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Officiis perferendis rem, aut aliquam neque nam? dolor sit amet,
-                consectetur adipisicing elit consectetur adipisicing.
+            <div className='footer1__about'>
+              <h4 className='text-24 font-normal m-0'>Về chúng tôi</h4>
+              <p className='my-6 max-w-200 text-inherit'>
+                Câu lạc bộ tin học HIT là Câu lạc bộ học tập sinh viên trực
+                thuộc khoa Công nghệ thông tin trường Đại học công nghiệp Hà
+                Nội. Được thành lập vào ngày 18/8/2010.
               </p>
-              <div className="flex flex-wrap">
+              <div className='flex flex-wrap'>
                 <div className={classes.iconWrapper}>
-                  <FacebookIcon className="text-13" fontSize="small" />
+                  <FacebookIcon className='text-13' fontSize='small' />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <TwitterIcon className="text-13" fontSize="small" />
+                  <TwitterIcon className='text-13' fontSize='small' />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <InstagramIcon className="text-13" fontSize="small" />
+                  <InstagramIcon className='text-13' fontSize='small' />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <LinkedinIcon className="text-13" fontSize="small" />
+                  <LinkedinIcon className='text-13' fontSize='small' />
                 </div>
               </div>
             </div>
           </Grid>
           <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Doanh nghiệp</h4>
-              <div className="mt-4 mb-6 ml--4">
+            <div className='footer1__about'>
+              <h4 className='text-24 font-normal m-0'>Doanh nghiệp</h4>
+              <div className='mt-4 mb-6 ml--4'>
                 {companyOption.map((item, ind) => (
                   <div
                     key={ind}
                     className={clsx(
                       "flex items-center py-2 cursor-pointer px-4 w-full",
-                      classes.link
+                      classes.link,
                     )}
                   >
                     <Icon>navigate_next</Icon>
@@ -99,15 +99,15 @@ const Footer2 = () => {
             </div>
           </Grid>
           <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Liên kết</h4>
-              <div className="mt-4 mb-6 ml--4">
+            <div className='footer1__about'>
+              <h4 className='text-24 font-normal m-0'>Liên kết</h4>
+              <div className='mt-4 mb-6 ml--4'>
                 {userfulLink.map((item, ind) => (
                   <div
                     key={ind}
                     className={clsx(
                       "flex items-center py-2 cursor-pointer px-4 w-full",
-                      classes.link
+                      classes.link,
                     )}
                   >
                     <Icon>navigate_next</Icon>
@@ -118,14 +118,14 @@ const Footer2 = () => {
             </div>
           </Grid>
           <Grid item lg={3} md={3} sm={6} xs={12}>
-            <div className="footer1__about">
-              <h4 className="text-24 font-normal m-0">Liên hệ</h4>
-              <p className="my-6 text-inherit">Sign Up for the latest news</p>
+            <div className='footer1__about'>
+              <h4 className='text-24 font-normal m-0'>Liên hệ</h4>
+              <p className='my-6 text-inherit'>Sign Up for the latest news</p>
               <TextField
-                className="mb-4"
-                size="small"
-                placeholder="Your Email"
-                variant="outlined"
+                className='mb-4'
+                size='small'
+                placeholder='Your Email'
+                variant='outlined'
                 fullWidth
                 inputProps={{
                   style: {
@@ -138,15 +138,15 @@ const Footer2 = () => {
                     paddingLeft: 4,
                   },
                   startAdornment: (
-                    <InputAdornment position="end">
-                      <Icon fontSize="small" className="text-white">
+                    <InputAdornment position='end'>
+                      <Icon fontSize='small' className='text-white'>
                         email
                       </Icon>
                     </InputAdornment>
                   ),
                 }}
               />
-              <Button className="w-full" variant="contained" color="primary">
+              <Button className='w-full' variant='contained' color='primary'>
                 SUBSCRIBE
               </Button>
             </div>
