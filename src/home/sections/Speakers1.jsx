@@ -76,13 +76,13 @@ const Speakers1 = () => {
   ];
 
   return (
-    <section className="section section-bg-light-primary" id="leader">
-      <div className="container text-center">
-        <h1 className="mt-0 font-normal text-44">BAN CHỦ NHIỆM</h1>
-        <p className="max-w-400 mx-auto mb-16">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua
+    <section className='section section-bg-light-primary' id='leader'>
+      <div className='container text-center'>
+        <h1 className='mt-0 font-normal text-44'>BAN CHỦ NHIỆM</h1>
+        <p className='max-w-400 mx-auto mb-16'>
+          Hy vọng trong nhiệm kỳ tới, với tinh thần và sức trẻ của mình, Ban chủ
+          nhiệm cùng với Ban quản trị sẽ hoạt động nhiệt huyết, hết mình để gặt
+          hái được nhiều thành công và phát triển CLB hơn nữa.
         </p>
 
         <Grid container spacing={3}>
@@ -92,48 +92,48 @@ const Speakers1 = () => {
                 elevation={4}
                 className={clsx(
                   "border-radius-12 px-6 pt-8 pb-4 text-center",
-                  classes.card
+                  classes.card,
                 )}
               >
-                <div className="mb-6 relative">
+                <div className='mb-6 relative'>
                   <Avatar
                     src={item.imgUrl}
-                    className="h-128 w-128 inline-block"
+                    className='h-128 w-128 inline-block'
                   ></Avatar>
                   <div
                     className={clsx(
                       "flex flex-wrap justify-center",
-                      classes.iconContainer
+                      classes.iconContainer,
                     )}
                   >
                     <div className={classes.iconWrapper}>
                       <FacebookIcon
-                        className="text-13 text-white"
-                        fontSize="small"
+                        className='text-13 text-white'
+                        fontSize='small'
                       />
                     </div>
                     <div className={classes.iconWrapper}>
                       <TwitterIcon
-                        className="text-13 text-white"
-                        fontSize="small"
+                        className='text-13 text-white'
+                        fontSize='small'
                       />
                     </div>
                     <div className={classes.iconWrapper}>
                       <InstagramIcon
-                        className="text-13 text-white"
-                        fontSize="small"
+                        className='text-13 text-white'
+                        fontSize='small'
                       />
                     </div>
                     <div className={classes.iconWrapper}>
                       <LinkedinIcon
-                        className="text-13 text-white"
-                        fontSize="small"
+                        className='text-13 text-white'
+                        fontSize='small'
                       />
                     </div>
                   </div>
                 </div>
-                <h5 className="m-0 font-medium text-18">{item.name}</h5>
-                <p className="description">{item.position}</p>
+                <h5 className='m-0 font-medium text-18'>{item.name}</h5>
+                <p className='description'>{item.position}</p>
               </Card>
             </Grid>
           ))}
