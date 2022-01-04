@@ -73,13 +73,7 @@ const Blog1 = () => {
       <div className='container'>
         <div className='max-w-400 mb-16 text-center mx-auto'>
           <h1 className='mt-0 font-normal text-44'>Bài viết mới nhất</h1>
-          <p>
-            Tham gia các lớp học em được học hỏi rất nhiều điều từ anh chị
-            leader, support. Không chỉ thế chúng em còn được học kiến thức
-            chuyên ngành, anh chị leader, support thì nhiệt tình hỗ trợ chúng em
-            mọi lúc. Em rất tự hào khi mình là một thành viên của CLB Tin học
-            HIT
-          </p>
+          <p></p>
         </div>
         <Grid container spacing={2}>
           {news.map((item, ind) => (
