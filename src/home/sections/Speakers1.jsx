@@ -60,12 +60,12 @@ const Speakers1 = () => {
     const speakerList = [
         {
             name: "Đặng Thị Thu Huế",
-            imgUrl: "/assets/images/face-1.jpg",
+            imgUrl: "/assets/images/hue.jpeg",
             position: "Phó chủ nhiệm hoạt động",
         },
         {
             name: "Nguyễn Lương Hùng",
-            imgUrl: "/assets/images/face-4.jpg",
+            imgUrl: "/assets/images/hung.jpeg",
             position: "Chủ nhiệm câu lạc bộ",
         },
         {
@@ -78,7 +78,7 @@ const Speakers1 = () => {
     return (
         <section className="section section-bg-light-primary" id="leader">
             <div className="container text-center">
-                <h1 className="mt-0 font-normal text-44">BAN CHỦ NHIỆM</h1>
+                <h1 className="mt-0 font-normal text-44">Ban Chủ Nhiệm</h1>
                 <p className="max-w-400 mx-auto mb-16">
                     Hy vọng trong nhiệm kỳ tới, với tinh thần và sức trẻ của
                     mình, Ban chủ nhiệm cùng với Ban quản trị sẽ hoạt động nhiệt
